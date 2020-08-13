@@ -1,4 +1,5 @@
 from geneval.metrics.bleu import BLEUCalculator
+from geneval.metrics.distinct import DistinctCalculator
 
 def load_files():
     with open("examples/hyp1.txt", "r") as f:
@@ -45,9 +46,17 @@ def example():
     hyps = [hyp1, hyp2]
     refs = [ref1, ref2]
 
+    """
+    BLEU
+    """
     bleu_scorer = BLEUCalculator()
     bleu_score_dict = bleu_scorer.calculate_metrics(hyps, refs)
-    print_dict(bleu_score_dict)
+
+    """
+    Distinct-N
+    """
+    distinct_scorer = DistinctCalculator()
+    distinct_score_dict = distinct_scorer.calculate_metrics(hyps)
     
 
 if __name__ == "__main__":

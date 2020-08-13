@@ -5,14 +5,13 @@ It takes input as pairs of generated sentece and references and outputs values o
 ## Metrics
 
 ### Implemented
-- None
+- BLEU
+- Distinct-N
 
 ### Todo
-- BLEU
 - METEOR
 - ROUGE
-- CIDEr
-- Distinct-N
+- CIDEr  
 and more
 
 ## Setup
